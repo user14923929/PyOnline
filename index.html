@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PyOnline</title>
     <style>
         body {
-            font-family: sans-serif;
+            font-family: monospace;
             margin: 2em;
         }
 
@@ -18,7 +18,7 @@
 
         pre {
             background: #111;
-            color: #0f0;
+            color: rgb(0, 98, 255);
             padding: 10px;
             border-radius: 5px;
         }
@@ -27,17 +27,21 @@
             margin-top: 10px;
             padding: 8px 15px;
         }
+
+        button:hover {
+            background-color: chartreuse;
+            color: white;
+            border: #111;
+        }
     </style>
 </head>
-
 <body>
     <h1>PyOnline</h1>
     <form method="post">
-        <textarea name="code">{{ code }}</textarea><br>
-        <button type="submit">▶ Run</button>
+        <textarea name="code" title="Enter the code" style="resize: none;">{{ code }}</textarea><br>
+        <button type="submit" title="Click to run code">▶ Run</button>
     </form>
     <h3>Output:</h3>
     <pre>{{ output }}</pre>
 </body>
-
 </html>
