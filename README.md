@@ -69,7 +69,7 @@ Set it to `True` if you want to see detailed error logs.
 
 PyOnline reads Python code from the HTML form and executes it using:
 ```python
-exec(code, {"__builtins__": {"print": print, "range": range, "len": len}})
+exec(code)
 ```
 Output and errors are captured via `contextlib.redirect_stdout` and `StringIO`,  
 then displayed back in the browser.
