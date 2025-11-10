@@ -17,8 +17,7 @@ def index():
         buffer = io.StringIO()
         try:
             with contextlib.redirect_stdout(buffer), contextlib.redirect_stderr(buffer):
-                # You are safety, baby!
-                exec(code, {"__builtins__": {"print": print, "range": range, "len": len}})
+                exec(code)
         except Exception as e:
             print("Error:", e, file=buffer)
         output = buffer.getvalue()
